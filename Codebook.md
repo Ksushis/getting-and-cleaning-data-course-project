@@ -219,3 +219,4 @@ fBodyBodyGyroJerkMagnitude-std
 
 ##Sources
 I found the following sources helpful for this project: sources https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/ http://www.statmethods.net/input/valuelabels.html (for step 3) http://stackoverflow.com/questions/12064202/using-aggregate-for-multiple-aggregations (for step 5)
+https://gist.github.com/JorisSchut/dbc1fc0402f28cad9b41#file-gistfile1-rmd (template for the codebook)
