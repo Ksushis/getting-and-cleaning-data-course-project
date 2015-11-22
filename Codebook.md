@@ -8,7 +8,7 @@ output:
 ---
 
 ## Project Description
-The purpose of this poejct goal was to demostrate my ability to collect, work with, and clean a data set. 
+The purpose of this poject was to demostrate my ability to collect, work with, and clean a data set. 
 The goal was to prepare tidy data that can be used for later analysis based on some parameters (to be described later in this Codebook).
 
 ##Study design and data processing
@@ -28,41 +28,184 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ##Creating the tidy datafile
 
 ###Guide to create the tidy data file
-Description on how to create the tidy data file (1. download the data, ...)/
+
 1. Download the data from the following URL: 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
-2. Extract the .zip file into a working directory (you should get a UCI HAR Dataset folder
-3. Run run_analysis.R file (see ReadMe.md file for more details)
+
+2. Extract the .zip file into a working directory (you should get a UCI HAR Dataset folder)
+
+3. Run [run_analysis.R file] (https://github.com/Ksushis/getting-and-cleaning-data-course-project/blob/master/run_analysis.R) (see ReadMe.md file [README file](https://github.com/Ksushis/getting-and-cleaning-data-course-project/blob/master/README.md) for more details). 
+
+The script will generate tidydataset data.frame with tidy data. You can optionally save the dataset to file (see [README file](https://github.com/Ksushis/getting-and-cleaning-data-course-project/blob/master/README.md) for more details). 
 
 
 ###Cleaning of the data
 
+###AcitivityLabel 
 
+Describes the type of activity, a factor with levels: 
 
-##Description of the variables in the tiny_data.txt file
-General description of the file including:
- - Dimensions of the dataset
- - Summary of the data
- - Variables present in the dataset
+WALKING
 
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
+WALKING_UPSTAIRS
 
-###Variable 1 (repeat this section for all variables in the dataset)
-Short description of what the variable describes.
+WALKING_DOWNSTAIRS
 
-Some information on the variable including:
- - Class of the variable
- - Unique values/levels of the variable
- - Unit of measurement (if no unit of measurement list this as well)
- - In case names follow some schema, describe how entries were constructed (for example time-body-gyroscope-z has 4 levels of descriptors. Describe these 4 levels). 
+SITTING
 
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
+STANDING
 
-####Notes on variable 1:
-If available, some additional notes on the variable not covered elsewehere. If no notes are present leave this section out.
+LAYING
+
+###Subject 
+
+An identifier of the subject who carried out the experiment, a factor with integer numbers between 1 and 30 (inclusive) for levels.
+
+### Variables 3-68 - mean or std of corresponding measurement for each activity and subject
+
+Mean scheme:
+
+1. Each measurement name starts with domain denomination (t for time, f for frequency).
+
+2. There were 2 types of signals recorded, one from accelerator, the other from gyroscope. The Acceleration signal was further borken down into BodyAcceleration and GravityAcceleration parts. The names have Gyro for gyroscope.Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccelerationJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccelerationMagnitude, tGravityAccelerationMagnitude, tBodyAccelerationJerkMagnitude, tBodyGyroMagnitude, tBodyGyroJerkMagnitude). 
+
+3. The name contains the type of statistics applied (mean or std)
+
+4. The name has Axis (x, y, or z)
+
+The names of the variables are:
+
+tBodyAcceleration-mean-X
+
+tBodyAcceleration-mean-Y
+
+tBodyAcceleration-mean-Z
+
+tGravityAcceleration-mean-X
+
+tGravityAcceleration-mean-Y
+
+tGravityAcceleration-mean-Z
+
+tBodyAccelerationJerk-mean-X
+
+tBodyAccelerationJerk-mean-Y
+
+tBodyAccelerationJerk-mean-Z
+
+tBodyGyro-mean-X
+
+tBodyGyro-mean-Y
+
+tBodyGyro-mean-Z
+
+tBodyGyroJerk-mean-X
+
+tBodyGyroJerk-mean-Y
+
+tBodyGyroJerk-mean-Z
+
+tBodyAccelerationMagnitude-mean
+
+tGravityAccelerationMagnitude-mean
+
+tBodyAccelerationJerkMagnitude-mean
+
+tBodyGyroMagnitude-mean
+
+tBodyGyroJerkMagnitude-mean
+
+fBodyAcceleration-mean-X
+
+fBodyAcceleration-mean-Y
+
+fBodyAcceleration-mean-Z
+
+fBodyAccelerationJerk-mean-X
+
+fBodyAccelerationJerk-mean-Y
+
+fBodyAccelerationJerk-mean-Z
+
+fBodyGyro-mean-X
+
+fBodyGyro-mean-Y
+
+fBodyGyro-mean-Z
+
+fBodyAccelerationMagnitude-mean
+
+fBodyBodyAccelerationJerkMagnitude-mean
+
+fBodyBodyGyroMagnitude-mean
+
+fBodyBodyGyroJerkMagnitude-mean
+
+tBodyAcceleration-std-X
+
+tBodyAcceleration-std-Y
+
+tBodyAcceleration-std-Z
+
+tGravityAcceleration-std-X
+
+tGravityAcceleration-std-Y
+
+tGravityAcceleration-std-Z
+
+tBodyAccelerationJerk-std-X
+
+tBodyAccelerationJerk-std-Y
+
+tBodyAccelerationJerk-std-Z
+
+tBodyGyro-std-X
+
+tBodyGyro-std-Y
+
+tBodyGyro-std-Z
+
+tBodyGyroJerk-std-X
+
+tBodyGyroJerk-std-Y
+
+tBodyGyroJerk-std-Z
+
+tBodyAccelerationMagnitude-std
+
+tGravityAccelerationMagnitude-std
+
+tBodyAccelerationJerkMagnitude-std
+
+tBodyGyroMagnitude-std
+
+tBodyGyroJerkMagnitude-std
+
+fBodyAcceleration-std-X
+
+fBodyAcceleration-std-Y
+
+fBodyAcceleration-std-Z
+
+fBodyAccelerationJerk-std-X
+
+fBodyAccelerationJerk-std-Y
+
+fBodyAccelerationJerk-std-Z
+
+fBodyGyro-std-X
+
+fBodyGyro-std-Y
+
+fBodyGyro-std-Z
+
+fBodyAccelerationMagnitude-std
+
+fBodyBodyAccelerationJerkMagnitude-std
+
+fBodyBodyGyroMagnitude-std
+
+fBodyBodyGyroJerkMagnitude-std
 
 ##Sources
-Sources you used if any, otherise leave out.
-
-##Annex
-If you used any code in the codebook that had the echo=FALSE attribute post this here (make sure you set the results parameter to 'hide' as you do not want the results to show again)
+I found the following sources helpful for this project: sources https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/ http://www.statmethods.net/input/valuelabels.html (for step 3) http://stackoverflow.com/questions/12064202/using-aggregate-for-multiple-aggregations (for step 5)
