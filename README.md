@@ -166,6 +166,7 @@ If you have a tidydataset.txt file with the tidy dataset you would like to view,
 This step assumes the file was written with write.table(tidy_data, file="tidydataset.txt",row.name=FALSE) command
 
 tidydataset_from_file <- read.table("tidydataset.txt", header = TRUE) 
+
 View(tidydataset_from_file)
 
 I found the following sources helpful for this project:
