@@ -41,6 +41,16 @@ The script will generate tidydataset data.frame with tidy data. You can optional
 
 ###Cleaning of the data
 
+The following cleanup of the raw data from the original dataset (available here [](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)) has been performed:
+
+1. The training and the test sets were merged to create one data set.
+2. Only the mean and standard deviation for each measurement were left in the dataset. I only left the variables that had mean() and std() in their names since those corresponded to the mean and std of the variables. For examples, I excluded meanFreq() etc. features based on the description in the features_info.txt file in the original dataset (the features_info.txt file is available if you download the raw dataset, see it for more details). The description of the features said that features with mean() and std() were the mean and standard diviation of the corresponding measurements, whereas "meanFreq() was "Weighted average of the frequency components to obtain a mean frequency", which is not just the mean of the measurement.I also excluded the features like "angle(tBodyGyroJerkMean,gravityMean)" because they were not the "mean of the measurement"
+3. I created descriptive names for the acitivities (see ActivityLabel desciption below)
+4. To clean up the names of the features to make them more creative, I deleted "()" from the names in "mean()" and "std()", replaced "Acc" in the names with "Acceleration", replaced "Mag" in the names with with "Magnitude" 
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+In particular, the tidy dataset has the following 68 columns:
+
 ###AcitivityLabel 
 
 Describes the type of activity, a factor with levels: 
@@ -61,13 +71,13 @@ LAYING
 
 An identifier of the subject who carried out the experiment, a factor with integer numbers between 1 and 30 (inclusive) for levels.
 
-### Variables 3-68 - mean or std of corresponding measurement for each activity and subject
+### Variables 3-68 - average of the mean or std of corresponding measurement for each activity and subject
 
-Mean scheme:
+Variable name scheme:
 
-1. Each measurement name starts with domain denomination (t for time, f for frequency).
+1. Each variable name starts with domain denomination (t for time, f for frequency).
 
-2. There were 2 types of signals recorded, one from accelerator, the other from gyroscope. The Acceleration signal was further borken down into BodyAcceleration and GravityAcceleration parts. The names have Gyro for gyroscope.Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccelerationJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccelerationMagnitude, tGravityAccelerationMagnitude, tBodyAccelerationJerkMagnitude, tBodyGyroMagnitude, tBodyGyroJerkMagnitude). 
+2. There were 2 types of signals recorded, one from accelerator, the other from gyroscope. The Acceleration signal was further broken down into BodyAcceleration and GravityAcceleration parts. The names have Gyro for gyroscope. Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccelerationJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccelerationMagnitude, tGravityAccelerationMagnitude, tBodyAccelerationJerkMagnitude, tBodyGyroMagnitude, tBodyGyroJerkMagnitude). 
 
 3. The name contains the type of statistics applied (mean or std)
 
