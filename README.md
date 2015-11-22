@@ -170,6 +170,6 @@ View(tidydataset_from_file)
 
 I found the following sources helpful for this project:
 
-https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/
-http://www.statmethods.net/input/valuelabels.html  (for step 3)
-http://stackoverflow.com/questions/12064202/using-aggregate-for-multiple-aggregations (for step 5)
+* https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/
+* http://www.statmethods.net/input/valuelabels.html  (for step 3)
+* http://stackoverflow.com/questions/12064202/using-aggregate-for-multiple-aggregations (for step 5)
