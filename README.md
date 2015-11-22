@@ -20,6 +20,8 @@ The script follows these steps:
 4. Appropriately labels the data set with descriptive variable names. 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
+More details about the dataset and the cleaning process in [Codebook] (https://github.com/Ksushis/getting-and-cleaning-data-course-project/blob/master/Codebook.md). The script itself contains extensive comments for each step. 
+
 The tidy dataset created by the script is tidydataset data.frame with 68 columns with the following names:
 
 ActivityLabel
