@@ -34,10 +34,14 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 2. Extract the .zip file into a working directory (you should get a UCI HAR Dataset folder)
 
-3. Run [run_analysis.R file] (https://github.com/Ksushis/getting-and-cleaning-data-course-project/blob/master/run_analysis.R) (see ReadMe.md file [README file](https://github.com/Ksushis/getting-and-cleaning-data-course-project/blob/master/README.md) for more details). 
+3. Run [run_analysis.R file] (https://github.com/Ksushis/getting-and-cleaning-data-course-project/blob/master/run_analysis.R) (see ReadMe.md file [README file](https://github.com/Ksushis/getting-and-cleaning-data-course-project/blob/master/README.md) for more details). The script contains extensive comments for each step in the cleaning and creating a tidy dataset process
 
 The script will generate tidydataset data.frame with tidy data. You can optionally save the dataset to file (see [README file](https://github.com/Ksushis/getting-and-cleaning-data-course-project/blob/master/README.md) for more details). 
 
+The tidydataset data.frame created with run_analysis.R script has the following attributes of tidy data:
+* 1 variable per column, 
+* each column is labeled, 
+* there are no duplicate columns.
 
 ###Cleaning of the data
 
@@ -218,5 +222,5 @@ fBodyBodyGyroMagnitude-std
 fBodyBodyGyroJerkMagnitude-std
 
 ##Sources
-I found the following sources helpful for this project: sources https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/ http://www.statmethods.net/input/valuelabels.html (for step 3) http://stackoverflow.com/questions/12064202/using-aggregate-for-multiple-aggregations (for step 5)
+I found the following sources helpful for this project: https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/ http://www.statmethods.net/input/valuelabels.html (for step 3) http://stackoverflow.com/questions/12064202/using-aggregate-for-multiple-aggregations (for step 5)
 https://gist.github.com/JorisSchut/dbc1fc0402f28cad9b41#file-gistfile1-rmd (template for the codebook)
