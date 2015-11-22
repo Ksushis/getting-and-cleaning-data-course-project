@@ -158,7 +158,7 @@ names(tidydataset)[1:2]<-c("ActivityLabel","Subject")
 
 # Uncomment the code below to generate a file
 
-write.table(tidydataset, file="tidydataset.txt",row.name=FALSE)
+# write.table(tidydataset, file="tidydataset.txt",row.name=FALSE)
 
 # To read and view the data, execute the code below,
 # assuming the tidydataset.txt file is the file with
@@ -167,5 +167,5 @@ write.table(tidydataset, file="tidydataset.txt",row.name=FALSE)
 # this step assumes the file was written with 
 # write.table(tidy_data, file="tidydataset.txt",row.name=FALSE) 
 
-tidydataset_from_file <- read.table("tidydataset.txt", header = TRUE)
-View(tidydataset_from_file)
+#tidydataset_from_file <- read.table("tidydataset.txt", header = TRUE)
+#View(tidydataset_from_file)
