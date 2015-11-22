@@ -48,10 +48,10 @@ The tidydataset data.frame created with run_analysis.R script has the following 
 The following cleanup of the raw data from the original dataset (available here [](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)) has been performed:
 
 1. The training and the test sets were merged to create one data set.
-2. Only the mean and standard deviation for each measurement were left in the dataset. I only left the variables that had mean() and std() in their names since those corresponded to the mean and std of the variables. For examples, I excluded meanFreq() etc. features based on the description in the features_info.txt file in the original dataset (the features_info.txt file is available if you download the raw dataset, see it for more details). The description of the features said that features with mean() and std() were the mean and standard diviation of the corresponding measurements, whereas "meanFreq() was "Weighted average of the frequency components to obtain a mean frequency", which is not just the mean of the measurement.I also excluded the features like "angle(tBodyGyroJerkMean,gravityMean)" because they were not the "mean of the measurement"
+2. Only the mean and standard deviation for each measurement were left in the dataset. I only left the columns that had mean() and std() in their names since those were the mean and std of the corresponding variables. For examples, I excluded meanFreq() etc. features based on the description in the features_info.txt file in the original dataset (the features_info.txt file is available if you download the raw dataset, see it for more details). The description of the features said that features with mean() and std() were the mean and standard diviation of the corresponding measurements, whereas "meanFreq() was "Weighted average of the frequency components to obtain a mean frequency", which is not just the mean of the measurement.I also excluded the features like "angle(tBodyGyroJerkMean,gravityMean)" because they were not the "mean of the measurement"
 3. I created descriptive names for the acitivities (see ActivityLabel desciption below)
 4. To clean up the names of the features to make them more creative, I deleted "()" from the names in "mean()" and "std()", replaced "Acc" in the names with "Acceleration", replaced "Mag" in the names with with "Magnitude" 
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+5. From the data set in step 4, I created a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 In particular, the tidy dataset has the following 68 columns:
 
@@ -75,7 +75,7 @@ LAYING
 
 An identifier of the subject who carried out the experiment, a factor with integer numbers between 1 and 30 (inclusive) for levels.
 
-### Variables 3-68 - average of the mean or std of corresponding measurement for each activity and subject
+### Variables 3-68 - average of the mean or std of corresponding measurement for the corresponding activity and subject
 
 Variable name scheme:
 
